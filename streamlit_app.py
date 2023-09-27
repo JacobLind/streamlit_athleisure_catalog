@@ -1,2 +1,3 @@
 import streamlit
-streamlit.subtitle('Breakfast Menu')
+streamlit.header('Breakfast Menu')
+streamlit.text('Omega 3 & Blueberry Oatmeal')

@@ -43,8 +43,8 @@ try:
     fruityvice_normalized 
     # back_from_function =  get_fruityvice_data(fruitchoice)
     #streamlit.dataframe(fruityvice_normalized)
-    #streamlit.dataframe(back_from_function)
-    back_from_function
+    streamlit.dataframe(back_from_function)
+    #back_from_function
 
 except URLError as e:
     streamlit.error()

@@ -39,7 +39,8 @@ try:
     #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     #back_from_function = get_fruityvice_data(fruit_choice)
-    back_from_function = fruityvice_normalized #get_fruityvice_data(Banana)
+    fruityvice_normalized 
+    # back_from_function =  get_fruityvice_data(fruitchoice)
     #streamlit.dataframe(fruityvice_normalized)
     streamlit.dataframe(back_from_function)
 

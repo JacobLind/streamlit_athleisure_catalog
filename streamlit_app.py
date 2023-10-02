@@ -24,7 +24,7 @@ streamlit.dataframe(fruits_to_show)
 
 # create the repeatable code block (called a function)
 #def get_fruityvice_data(this_fruit_choice):
-def get_fruityvice_data(Banana):
+def get_fruityvice_data(banana):
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     return fruityvice_normalized
@@ -32,7 +32,7 @@ def get_fruityvice_data(Banana):
 #new section to display fruityvice api response
 streamlit.header("Fruityvice Fruit Advice!")
 try:
-  fruit_choice = Banana #streamlit.text_input('What fruit would you like information about?')
+  fruit_choice = banana #streamlit.text_input('What fruit would you like information about?')
   if not fruit_choice:
     streamlit.error("Please select fruit to get information.")
   else:

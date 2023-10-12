@@ -8,12 +8,14 @@ streamlit.title('Zenas Amaizing Athleisure Catalog')
 
 #import pandas
 my_clothes_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
-my_clothes_list = my_fruit_list.set_index('Clothes')
-# Let's put a pick list here so they can pick the fruit they want to include 
+my_clothes_list = my_clothes_list.set_index('Clothes')
+# Let's put a pick list here so they can pick the clothes 
 clothes_selected = streamlit.multiselect("Pick sweatsuit color or style:", list(my_clothes_list.index))
-fruits_to_show = my_fruit_list.loc[fruits_selected]
+clothes_to_show = my_clothes_list.loc[clothes_selected]
 # Display the table on the page.
-streamlit.dataframe(fruits_to_show)
+streamlit.dataframe(clothes_to_show)
+
+streamlit.stop()
 
 # create the repeatable code block (called a function)
 def get_fruityvice_data(this_fruit_choice):

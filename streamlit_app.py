@@ -7,8 +7,8 @@ from urllib.error import URLError
 streamlit.title('Zenas Amaizing Athleisure Catalog')
 
 #import pandas
-my_clothes_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
-my_clothes_list = my_clothes_list.set_index('Clothes')
+my_clothes_list = pandas.read_csv("https://uni-klaus.s3.us-west-2.amazonaws.com/swt_product_line.txt")
+my_clothes_list = my_clothes_list.set_index('clothes')
 # Let's put a pick list here so they can pick the clothes 
 clothes_selected = streamlit.multiselect("Pick sweatsuit color or style:", list(my_clothes_list.index))
 clothes_to_show = my_clothes_list.loc[clothes_selected]
